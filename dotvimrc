@@ -43,7 +43,7 @@ endif
 
 " this section makes colorscheme work under PuTTY
 if &term =~ "xterm"
-  " 256 colors
+  "256 colours
   let &t_Co = 256
   " restore screen after quitting
   let &t_ti = "\<Esc>7\<Esc>[r\<Esc>[?47h"
@@ -80,3 +80,13 @@ set incsearch     " do incremental searching
 " let mapleader="," "default is \
 
 :map <Leader>t :echo "Hello" <ESC>
+
+" remove trailing spaces from all lines prior to saving
+fun! <SID>StripTrailSpace()
+   let l = line(".")
+   let c = col(".")
+   %s/\s\+$//e
+   call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailSpace()
