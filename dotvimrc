@@ -1,7 +1,8 @@
 " Piers Barber
 syntax on
 au BufRead,BufNewFile *.vhdm set filetype=vhdl
-au BufRead,BufNewFile *.sv set filetype=verilog_systemverilog
+au BufRead,BufNewFile *.sv   set filetype=verilog_systemverilog
+au BufRead,BufNewFile *.svh  set filetype=verilog_systemverilog
 
 " line numbering on
 set number
