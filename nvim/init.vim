@@ -1,14 +1,25 @@
-" Piers Barber
+" set to python2 as that's what most plugins use
+let g:python_host_prog = '/usr/bin/python2.7'
+let g:loaded_python3_provider = 1
+
+" plugin manager with nice clean control sequence and a one liner install:
+"
+" curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
+" OK it was 1+ lines
+"
+call plug#begin()
+  Plug 'scrooloose/nerdtree'
+  Plug 'critiqjo/lldb.nvim' "remember to :UpdateRemotePlugins
+call plug#end()
+
 syntax on
-au BufRead,BufNewFile *.vhdm set filetype=vhdl
-au BufRead,BufNewFile *.sv   set filetype=verilog_systemverilog
-au BufRead,BufNewFile *.svh  set filetype=verilog_systemverilog
 
 " line numbering on
-set number
+set number "set nonu
 
-" 3 space/tab-free indents for VHDL
-set shiftwidth=3
+set shiftwidth=2
 set expandtab
 
 " save/restore a file view (to get folds back)
@@ -32,16 +43,6 @@ inoremap <Right> <NOP>
 noremap <A-Right> <esc>dp
 " -> diff obtain (do)
 noremap <A-Left> <esc>do
-
-" set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
-
-" if i'm running with the gui (faster than terminal on CentOS box!) then make it a useful width
-if has("gui_running")
-  set lines=65 columns=248
-  set guioptions-=m "remove menubar
-  set guioptions-=T "remove toolbar
-endif
 
 " this section makes colorscheme work under PuTTY
 if &term =~ "xterm"
