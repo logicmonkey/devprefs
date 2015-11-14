@@ -44,6 +44,9 @@ noremap <A-Right> <esc>dp
 " -> diff obtain (do)
 noremap <A-Left> <esc>do
 
+" unhighlight current search on Space
+map <Space> :noh<cr>
+
 " this section makes colorscheme work under PuTTY
 if &term =~ "xterm"
   "256 colours
