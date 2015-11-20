@@ -11,8 +11,16 @@ let g:loaded_python3_provider = 1
 "
 call plug#begin()
   Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-obsession'
+  Plug 'bling/vim-airline'
   Plug 'critiqjo/lldb.nvim' "remember to :UpdateRemotePlugins
 call plug#end()
+
+" the tabline stuff is pretty much deprecated in airline
+"  - by users, not by the author :)
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#left_sep=' '
+" let g:airline#extensions#tabline#left_alt_sep='|'
 
 syntax on
 
@@ -38,6 +46,21 @@ inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
 inoremap <Right> <NOP>
+
+" ESC to enter normal mode in terminal
+tnoremap <ESC> <C-\><C-n>
+
+" alt jump window (terminal mode)
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+
+" alt jump window (normal mode)
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " <- diff put (dp)
 noremap <A-Right> <esc>dp
