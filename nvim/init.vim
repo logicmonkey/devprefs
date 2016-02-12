@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'tpope/vim-obsession'
   Plug 'bling/vim-airline'
   Plug 'critiqjo/lldb.nvim' "remember to :UpdateRemotePlugins
+  Plug 'godlygeek/tabular'
 call plug#end()
 
 " the tabline stuff is pretty much deprecated in airline
@@ -61,6 +62,11 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+"
+" window splits and close
+nnoremap <A-v> <C-w>v
+nnoremap <A-s> <C-w>s
+nnoremap <A-c> <C-w>c
 
 " <- diff put (dp)
 noremap <A-Right> <esc>dp
