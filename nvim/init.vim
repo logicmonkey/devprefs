@@ -48,14 +48,16 @@ inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
 inoremap <Right> <NOP>
 
-" ESC to enter normal mode in terminal
-tnoremap <ESC> <C-\><C-n>
+if has("nvim")
+  " ESC to enter normal mode in nvim terminal
+  tnoremap <ESC> <C-\><C-n>
 
-" alt jump window (terminal mode)
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
+  " alt jump window (nvim terminal mode)
+  tnoremap <A-h> <C-\><C-n><C-w>h
+  tnoremap <A-j> <C-\><C-n><C-w>j
+  tnoremap <A-k> <C-\><C-n><C-w>k
+  tnoremap <A-l> <C-\><C-n><C-w>l
+endif
 
 " alt jump window (normal mode)
 nnoremap <A-h> <C-w>h
