@@ -1,23 +1,28 @@
-# devprefs
+# env
 my vim and tmux configs
 
 Linux
 -----
-ln -s devprefs/dotvimrc     ~/.vimrc
-ln -s devprefs/dotvim       ~/.vim
-ln -s devprefs/dottmux.conf ~/.tmux.conf
+vim needs to see a .vimrc file and .vim directory
+ln -s env/nvim              ~/.vim
+ln -s env/nvim/init.vim     ~/.vimrc
+
+neovim needs to see just the nvim directory with the init.vim file and eveything else
+ln -s env/nvim ~/.config/nvim
+
+ln -s env/dottmux.conf ~/.tmux.conf
 
 Windows
 -------
-copy devprefs\dotvimrc c:\users\who.ami\_gvimrc
+copy env\nvim\init.vim c:\users\who.ami\_gvimrc
 
 Git
 ---
 # comment these once i understand git better
-git clone https://github.com/logicmonkey/devprefs.git
-cd devprefs/
+git clone https://github.com/logicmonkey/env.git
+cd env/
 git remote -v
-git remote add upstream  https://github.com/logicmonkey/devprefs.git
+git remote add upstream  https://github.com/logicmonkey/env.git
 git remote -v
 git fetch upstream
 git checkout master
