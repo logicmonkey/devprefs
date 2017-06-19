@@ -95,6 +95,8 @@ if &term =~ "xterm"
 endif
 
 " select colorscheme according to whim
+" molokai with molokai_original=0 is best - set terminal background colour to #1B1D1E
+"
 if &t_Co > 2 || has("gui_running")
 " colorscheme myshell " taken from Walyd
 " colorscheme toops   " taken from Ali
