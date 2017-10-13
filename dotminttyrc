@@ -1,3 +1,4 @@
+# my modified monokai colour scheme for mintty (as used in git bash)
 BoldAsFont=-1
 Columns=248
 Rows=80
