@@ -17,7 +17,7 @@ Working
 -------
 
 git add myfile # stages myfile
-git commit -m 'meaningful message' # commits myfile
+git commit -m 'meaningful message' # commits staged changes
 git log # lists changes
 git log --follow myfile # lists changes on myfile
 git commit -am 'meaningful message' # stage and commit modified files in one go
