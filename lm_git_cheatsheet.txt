@@ -1,0 +1,24 @@
+Logicmonkey Git Cheat Sheet
+===========================
+
+Files are [modified] | [staged] | [committed]
+
+Getting Started
+---------------
+
+mkdir myproj
+cd myproj
+git init
+git config --global user.name "Your Name"
+git config --global user.email "your.name@dotcom.com
+git config --list
+
+Working
+-------
+
+git add myfile # stages myfile
+git commit -m 'meaningful message' # commits myfile
+git log # lists changes
+git log --follow myfile # lists changes on myfile
+git commit -am 'meaningful message' myfile # stage and commit myfile in one go
+
