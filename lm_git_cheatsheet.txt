@@ -20,6 +20,6 @@ git add myfile # stages myfile
 git commit -m 'meaningful message' # commits myfile
 git log # lists changes
 git log --follow myfile # lists changes on myfile
-git commit -am 'meaningful message' myfile # stage and commit myfile in one go
+git commit -am 'meaningful message' # stage and commit modified files in one go
 git commit --amend # opens the last commit and adds current changes to it
 
