@@ -34,7 +34,7 @@ Remotes
 -------
 
 git remote -v # details the source of the cloned repo
-git push origin master # sends the local master branch to the remote origin
+git push origin master # sends the local 'master' branch to the remote origin
 git pull origin master # will attempt to merge with local commits
 git fetch origin # will fetch the remote changes [e.g. on branches] but not merge them
 git diff origin/master # show differences. A space works but / invokes 'less'
@@ -42,3 +42,13 @@ git diff origin/master # show differences. A space works but / invokes 'less'
 Branching
 ---------
 
+C1 <- C2 <- C3 <- C4
+            ^     ^
+            |     |
+            |     +- (C1 'testing')
+            +- HEAD ('master')
+
+git branch testing # creates the 'testing' branch
+git branch # lists branches
+git checkout testing # switchesto the 'testing' branch
+git checkout -b testing master # creates a new branch based off 'master'
