@@ -134,3 +134,18 @@ git merge testing    # do fast forward merge
 
 Never rebase a public branch - the resulting merges will be a nightmare
 
+Stash
+-----
+
+git stash # enables files to be stored without committing when switching branch
+git stash show # displays the files in the stash
+git stash pop # recovers stashed files when returning to the branch
+
+Shell Variables
+---------------
+
+A merge tool (e.g. diffmerge) can use these temporary filename variables:
+
+$BASE <- $REMOTE <- $MERGED
+      \            /
+       `  $LOCAL  '
