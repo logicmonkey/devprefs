@@ -57,11 +57,11 @@ Fast Forward Merge
 ------------------
 
 Given:
-C1 <- C2 <- C3 <- C4
-            ^     ^
-            |     |
-            |     +- (C1 'testing')
-            +- HEAD ('master')
+        C1 <- C2 <- C3 <- C4
+                    ^     ^
+                    |     |
+                    |     +- (C1 'testing')
+                    +- HEAD ('master')
 
 git checkout master
 git merge testing
@@ -73,5 +73,40 @@ Results in the HEAD of 'master' advancing:
                           |- (C1 'testing')
                           +- HEAD ('master')
 
+
+Recursive/3-Way Merge
+---------------------
+
+Given:
+        C1 <- C2 <- C4           ('master')
+                \
+                C3 <- C5         ('testing')
+
+C4 is committed to 'master' while work continues on 'testing'
+
+        C1 <- C2 <- C4 <- C6     ('master')
+              * \   *     /
+                 C3 <- C5        ('testing')
+                       *
+
+The merge into C6 requires C4 and C5 and their common ancestor C2
+
+Feature Branches
+----------------
+
+        C1 <- C2 <--------------------------------------- C14 ('master')
+                \                                        /
+                 C3 <- C4 <- C5 <- C7 <- C9 <- C11 <- C13     ('testing')
+                               \        / \          /
+                                C6 <- C8   C10 <- C12
+                              ('feature1', 'feature2')
+
+Most work happens on 'testing' and is merged onto 'master' periodically.
+Feature branches come off 'testing' and are short-lived.
+
+git branch -D feature1 # deletes the 'feature1' branch
+
+git push origin testing  # sends the branch to the remote repo
+git push origin :testing # deletes the branch on the remote
 
 
