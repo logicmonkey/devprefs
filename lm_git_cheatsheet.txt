@@ -109,4 +109,28 @@ git branch -D feature1 # deletes the 'feature1' branch
 git push origin testing  # sends the branch to the remote repo
 git push origin :testing # deletes the branch on the remote
 
+Rebase
+------
+
+3 Way Merge:
+        C1 <- C2 <- C4 <- C6     ('master')
+                \         /
+                 C3 <- C5        ('testing')
+
+Rebase applies the patch of C3 to C4, making C4 the ancestor of C3 and enabling
+a Fast Forward Merge and leaving a branch-free linear history:
+
+        C1 <- C2 <- C4
+               `      \
+                 ` - - C3 <- C5
+
+        C1 <- C2 <- C4 <- C3 <- C5 (fast forward)
+        C1 <- C2 <- C4 <- C5 <- C6 (rebased)
+
+git checkout testing # switch to 'testing'
+git rebase master    # apply patches from 'master'
+git checkout master  # go back to 'master'
+git merge testing    # do fast forward merge
+
+Never rebase a public branch - the resulting merges will be a nightmare
 
