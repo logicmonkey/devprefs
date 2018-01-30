@@ -42,13 +42,36 @@ git diff origin/master # show differences. A space works but / invokes 'less'
 Branching
 ---------
 
+        C1 <- C2 <- C3 <- C4
+                    ^     ^
+                    |     |
+                    |     +- (C1 'testing')
+                    +- HEAD ('master')
+
+git branch # lists branches
+git branch testing # creates the 'testing' branch
+git checkout testing # switches to the 'testing' branch
+git checkout -b testing master # combines those last 2 commands
+
+Fast Forward Merge
+------------------
+
+Given:
 C1 <- C2 <- C3 <- C4
             ^     ^
             |     |
             |     +- (C1 'testing')
             +- HEAD ('master')
 
-git branch testing # creates the 'testing' branch
-git branch # lists branches
-git checkout testing # switchesto the 'testing' branch
-git checkout -b testing master # creates a new branch based off 'master'
+git checkout master
+git merge testing
+
+Results in the HEAD of 'master' advancing:
+        C1 <- C2 <- C3 <- C4
+                          ^
+                          |
+                          |- (C1 'testing')
+                          +- HEAD ('master')
+
+
+
