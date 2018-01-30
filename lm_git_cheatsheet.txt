@@ -23,3 +23,22 @@ git log --follow myfile # lists changes on myfile
 git commit -am 'meaningful message' # stage and commit modified files in one go
 git commit --amend # opens the last commit and adds current changes to it
 
+Undoing
+-------
+
+git reset HEAD myfile # unstages myfile
+git checkout -- myfile # overwrites the working copy of myfile
+git reset --hard # similar to above? i'll have to check and update this
+
+Remotes
+-------
+
+git remote -v # details the source of the cloned repo
+git push origin master # sends the local master branch to the remote origin
+git pull origin master # will attempt to merge with local commits
+git fetch origin # will fetch the remote changes [e.g. on branches] but not merge them
+git diff origin/master # show differences. A space works but / invokes 'less'
+
+Branching
+---------
+
