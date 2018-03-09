@@ -29,6 +29,7 @@ Undoing
 git checkout -- myfile # overwrites the modified unstaged copy of myfile
 git reset HEAD myfile # unstages myfile
 git reset --hard # unstages everything and overwrites with HEAD
+git show SOMEHASHVALUE:./myfile # prints the version of the file on SOMEHASHVALUE
 
 Remotes
 -------
