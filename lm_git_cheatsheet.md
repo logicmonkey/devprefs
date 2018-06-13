@@ -10,6 +10,10 @@ git init
 git config --global user.name "Your Name"
 git config --global user.email your.name@dotcom.com
 git config --list
+
+git commit -m "first commit"
+git remote add origin https://github.com/logicmonkey/myproj.git
+git push -u origin master
 ```
 
 ## Working
