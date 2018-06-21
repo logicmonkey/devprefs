@@ -52,6 +52,7 @@ git branch                           # lists branches
 git branch testing                   # creates the 'testing' branch
 git checkout testing                 # switches to the 'testing' branch
 git checkout -b testing master       # combines those last 2 commands
+git diff master..testing [myfile]    # compares the heads of two branches ... diffs common ancestor
 ```
 ## Fast Forward Merge
 Given:
