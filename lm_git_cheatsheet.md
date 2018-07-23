@@ -32,6 +32,9 @@ git checkout -- myfile               # overwrites the modified unstaged copy of 
 git reset HEAD myfile                # unstages myfile
 git reset --hard                     # unstages everything and overwrites with HEAD
 git show SOMEHASHVALUE:./myfile      # prints the version of the file on SOMEHASHVALUE
+
+git fetch origin                     # reset to state of remote in two commands
+git reset --hard origin/master
 ```
 ## Remotes
 ```bash
