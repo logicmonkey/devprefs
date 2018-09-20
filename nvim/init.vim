@@ -24,6 +24,9 @@ call plug#end()
 " let g:airline#extensions#tabline#left_alt_sep='|'
 
 syntax on
+set tags=./tags;/
+
+set hidden " allow switching away from an unsaved buffer
 
 " line numbering on
 set number "set nonu
