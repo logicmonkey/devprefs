@@ -109,6 +109,8 @@ git branch -D feature1               # deletes the 'feature1' branch
 ```bash
 git push origin testing              # sends the branch to the remote repo
 git push origin :testing             # deletes the branch on the remote
+
+git push origin HEAD:refs/for/mybranch # push to gerrit review
 ```
 ## Rebase
 3 Way Merge:
@@ -134,6 +136,12 @@ git merge testing                    # do fast forward merge
 ```
 Never rebase a public branch - the resulting merges will be a nightmare
 
+```bash
+git fetch                            # get the remote changes
+git rebase origin/mybranch           # locally graft branch changes onto fetched remote
+# fix conflicts
+git rebase --continue                # assuming there were conflicts
+```
 ## Stash
 ```bash
 git stash                            # store files without committing when switching branch
