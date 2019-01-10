@@ -15,6 +15,7 @@ call plug#begin()
   Plug 'bling/vim-airline'
   Plug 'critiqjo/lldb.nvim' "remember to :UpdateRemotePlugins
   Plug 'godlygeek/tabular'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " the tabline stuff is pretty much deprecated in airline
