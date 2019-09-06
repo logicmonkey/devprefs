@@ -1,0 +1,16 @@
+! * Razer Blackwidow ANSI pretending to be an Apple Aluminium ANSI keyboard
+! * Tecknet UK ISO pretending to be a Generic 101 key UK keyboard
+! Created by looking at the codes out of xev
+
+keycode 118 = Insert
+keycode 110 = Home
+keycode 112 = Page_Up
+keycode 119 = Delete
+keycode 115 = End
+keycode 117 = Page_Down
+keycode 113 = Left
+keycode 114 = Right
+keycode 111 = Up
+keycode 116 = Down
+keycode  49 = grave asciitilde
+keycode  12 = 3 numbersign sterling
