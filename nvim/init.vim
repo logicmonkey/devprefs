@@ -16,7 +16,11 @@ call plug#begin()
   Plug 'critiqjo/lldb.nvim' "remember to :UpdateRemotePlugins
   Plug 'godlygeek/tabular'
   Plug 'tpope/vim-fugitive'
+  Plug 'fmoralesc/molokayo'
 call plug#end()
+
+" enable begin/end match jumping with %
+runtime macros/matchit.vim
 
 " the tabline stuff is pretty much deprecated in airline
 "  - by users, not by the author :)
