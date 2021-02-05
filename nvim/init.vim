@@ -124,13 +124,23 @@ set ruler         " show the cursor position all the time
 set cursorline    " highlight current line
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-"
-" search & replace whatever is under the cursor
+
+" disable the leader timeout completely
 let mapleader=","
+set ttimeout
+set notimeout
+" search & replace whatever is under the cursor
 :nnoremap <Leader>s :%s/<C-r><C-w>/
-:nmap <Leader>c :Tmux make clean
-:nmap <Leader>b :Tmux make vbuild
-:nmap <Leader>v :Tmux make vrun
+
+:nmap <Leader>c :Tmux make clean<cr>
+:nmap <Leader>i :Tmux make ibuild<cr>
+:nmap <Leader>b :Tmux make vbuild<cr>
+:nmap <Leader>v :Tmux make irun<cr>
+:nmap <Leader>r :Tmux make vrun<cr>
+
+let @m="#          ,`\\\n#     ...    /\n#   @ o o @.'\n
+      \# .' ( o )\n#/  (     )\n#\.'  \\ : /\n#   nnn nnn\n"
+:nnoremap <Leader>m 0"mp
 
 " remove trailing spaces from all lines prior to saving
 fun! <SID>StripTrailSpace()
