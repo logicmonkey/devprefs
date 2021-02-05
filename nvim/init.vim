@@ -17,6 +17,7 @@ call plug#begin()
   Plug 'godlygeek/tabular'
   Plug 'tpope/vim-fugitive'
   Plug 'fmoralesc/molokayo'
+  Plug 'jgdavey/tslime.vim'
 call plug#end()
 
 " enable begin/end match jumping with %
@@ -123,10 +124,13 @@ set ruler         " show the cursor position all the time
 set cursorline    " highlight current line
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-
-" let mapleader="," "default is \
-
-:map <Leader>t :echo "Hello" <ESC>
+"
+" search & replace whatever is under the cursor
+let mapleader=","
+:nnoremap <Leader>s :%s/<C-r><C-w>/
+:nmap <Leader>c :Tmux make clean
+:nmap <Leader>b :Tmux make vbuild
+:nmap <Leader>v :Tmux make vrun
 
 " remove trailing spaces from all lines prior to saving
 fun! <SID>StripTrailSpace()
