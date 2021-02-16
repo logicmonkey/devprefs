@@ -43,7 +43,7 @@ highlight Search ctermfg=0 ctermbg=222 " Black LightGoldenrod2
 highlight SignColumn ctermfg=148 ctermbg=235 " Yellow3 Grey15
 highlight SpecialChar ctermfg=197 cterm=bold " DeepPink2
 highlight SpecialComment ctermfg=245 cterm=bold " Grey54
-highlight Special ctermfg=81 cterm=italic " SteelBlue1
+highlight Special ctermfg=148 cterm=none " Yellow3
 highlight Statement ctermfg=197 cterm=bold " DeepPink2
 highlight StatusLine ctermfg=239 " Grey30
 highlight StatusLineNC ctermfg=8 ctermbg=232 " Grey Grey3
@@ -51,7 +51,7 @@ highlight StorageClass ctermfg=208 cterm=italic " DarkOrange
 highlight Structure ctermfg=81 " SteelBlue1
 highlight Tag ctermfg=197 cterm=italic " DeepPink2
 highlight Title ctermfg=203 " IndianRed1
-highlight Todo ctermfg=15 cterm=bold " White
+highlight Todo ctermfg=208 cterm=none " DarkOrange
 highlight Typedef ctermfg=81 " SteelBlue1
 highlight Type ctermfg=81 cterm=none " SteelBlue1
 highlight Underlined ctermfg=8 cterm=underline " Grey

@@ -79,7 +79,7 @@ hi Search          guifg=#000000 guibg=#FFE792
 hi SignColumn      guifg=#A6E22E guibg=#232526
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#66D9EF               gui=italic
+hi Special         guifg=#A6E22E               gui=none
 " if has("spell")
 "     hi SpellBad    guisp=#FF0000 gui=undercurl
 "     hi SpellCap    guisp=#7070F0 gui=undercurl
@@ -93,7 +93,7 @@ hi StorageClass    guifg=#FD971F               gui=italic
 hi Structure       guifg=#66D9EF
 hi Tag             guifg=#F92672               gui=italic
 hi Title           guifg=#ef5939
-hi Todo            guifg=#FFFFFF               gui=bold
+hi Todo            guifg=#FD971F               gui=none
 
 hi Typedef         guifg=#66D9EF
 hi Type            guifg=#66D9EF               gui=none
