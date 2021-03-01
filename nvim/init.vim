@@ -38,6 +38,7 @@ syntax on
 set number " se nonu
 set hidden " allow switching away from an unsaved buffer
 set shiftwidth=2
+set shiftround
 set expandtab
 set hlsearch
 set history=50    " keep 50 lines of command line history
@@ -58,10 +59,18 @@ let g:loaded_python3_provider = 1
 " curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 "   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin()
-  Plug 'godlygeek/tabular'
+  Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-fugitive'
+  Plug 'godlygeek/tabular'
   Plug 'jgdavey/tslime.vim'
+  Plug 'itchyny/lightline.vim'
+  Plug 'jacoborus/tender.vim'
 call plug#end()
+
+" Settings to enable lightline and disable old mode indicator
+set laststatus=2
+set noshowmode
+let g:lightline = { 'colorscheme': 'tender' }
 
 " Enable begin/end match jumping with %
 runtime macros/matchit.vim
@@ -87,7 +96,8 @@ if &term =~ "xterm"
   endif
 endif
 
-colorscheme bolokai
+"colorscheme bolokai
+colorscheme tender
 
 
 "-------------------------------------------------------------

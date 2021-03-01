@@ -316,6 +316,8 @@ with open(sys.argv[1]) as colorscheme:
                     assign = is_fg.group().split('=')
                     if assign[1] == 'bg':
                       highlight += " ctermfg=bg"  # what does this do - solid?
+                    elif assign[1] == 'NONE':
+                      highlight += " ctermfg=NONE"
                     else:
                       col, idx = nearest256(assign[1]) # colour lookup
                       highlight += " ctermfg={}".format(idx)
@@ -324,6 +326,8 @@ with open(sys.argv[1]) as colorscheme:
                     assign = is_bg.group().split('=')
                     if assign[1] == 'fg' or assign[1] == 'bg':
                       highlight += " ctermbg={}".format(assign[1])
+                    elif assign[1] == 'NONE':
+                      highlight += " ctermbg=NONE"
                     else:
                       col, idx = nearest256(assign[1])
                       highlight += " ctermbg={}".format(idx)
