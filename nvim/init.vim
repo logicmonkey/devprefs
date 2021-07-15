@@ -75,6 +75,8 @@ let g:lightline = { 'colorscheme': 'tender' }
 
 " settings for vimtex
 set encoding=utf-8
+let g:vimtex_log_verbose = 1
+"let g:vimtex_view_general_viewer = 'okular'
 
 " Enable begin/end match jumping with %
 runtime macros/matchit.vim
