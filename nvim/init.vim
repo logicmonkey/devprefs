@@ -65,12 +65,16 @@ call plug#begin()
   Plug 'jgdavey/tslime.vim'
   Plug 'itchyny/lightline.vim'
   Plug 'jacoborus/tender.vim'
+  Plug 'lervag/vimtex'
 call plug#end()
 
 " Settings to enable lightline and disable old mode indicator
 set laststatus=2
 set noshowmode
 let g:lightline = { 'colorscheme': 'tender' }
+
+" settings for vimtex
+set encoding=utf-8
 
 " Enable begin/end match jumping with %
 runtime macros/matchit.vim
