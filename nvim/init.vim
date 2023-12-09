@@ -1,7 +1,7 @@
 "-------------------------------------------------------------
 "            ,`\                                         ,`\
 "       ...    /                                    ...    /
-"     @ o o @.'         .vimrc/init.vim           @ o o @.'
+"     @ O O @.'         .vimrc/init.vim           @ O O @.'
 "   .' ( o )                                    .' ( o )
 "  /  (     )                                  /  (     )
 "  .'  \ : /                                   .'  \ : /
@@ -26,7 +26,7 @@ map <Space> :noh<cr>
 :nmap <Leader>r :Tmux make vrun<cr>
 
 " Monkey
-let @m="#          ,`\\\n#     ...    /\n#   @ o o @.'\n
+let @m="#          ,`\\\n#     ...    /\n#   @ O O @.'\n
       \# .' ( o )\n#/  (     )\n#\.'  \\ : /\n#   nnn nnn\n"
 :nnoremap <Leader>m 0"mp
 
@@ -66,6 +66,7 @@ call plug#begin()
   Plug 'itchyny/lightline.vim'
   Plug 'jacoborus/tender.vim'
   Plug 'lervag/vimtex'
+  Plug 'preservim/nerdtree'
 call plug#end()
 
 " Settings to enable lightline and disable old mode indicator
@@ -83,6 +84,7 @@ runtime macros/matchit.vim
 " Recurse upwards to / looking for tags
 set tags=./tags;/
 
+set ff=unix
 
 "-------------------------------------------------------------
 " Hoop jumps for nice colours in most terminals
