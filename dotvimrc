@@ -34,6 +34,7 @@ let @m="#          ,`\\\n#     ...    /\n#   @ O O @.'\n
 "-------------------------------------------------------------
 " Behaviour
 "-------------------------------------------------------------
+filetype on
 syntax on
 set number " se nonu
 set hidden " allow switching away from an unsaved buffer
@@ -67,6 +68,7 @@ call plug#begin()
   Plug 'jacoborus/tender.vim'
   Plug 'lervag/vimtex'
   Plug 'preservim/nerdtree'
+  Plug 'vhda/verilog_systemverilog.vim'
 call plug#end()
 
 " Settings to enable lightline and disable old mode indicator
