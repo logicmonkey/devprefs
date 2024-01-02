@@ -69,6 +69,8 @@ call plug#begin()
   Plug 'lervag/vimtex'
   Plug 'preservim/nerdtree'
   Plug 'vhda/verilog_systemverilog.vim'
+  Plug 'morhetz/gruvbox'
+  Plug 'caglartoklu/mustangregular.vim'
 call plug#end()
 
 " Settings to enable lightline and disable old mode indicator
