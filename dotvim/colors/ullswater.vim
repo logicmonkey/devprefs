@@ -1,0 +1,16 @@
+highlight Character ctermfg=47 " SpringGreen2
+highlight Comment ctermfg=130 " DarkOrange3
+highlight Repeat ctermfg=47 " SpringGreen2
+highlight String ctermfg=66 " PaleTurquoise4
+highlight Todo ctermfg=9 " Red
+highlight Conditional ctermfg=47 " SpringGreen2
+highlight Constant ctermfg=111 " SkyBlue2
+highlight Tag ctermfg=47 " SpringGreen2
+highlight Number ctermfg=111 " SkyBlue2
+highlight Special ctermfg=211 " PaleVioletRed1
+highlight Statement ctermfg=178 " Gold3
+highlight Define ctermfg=208 " DarkOrange
+highlight Function ctermfg=32 " DeepSkyBlue3
+highlight Typedef ctermfg=47 " SpringGreen2
+highlight Type ctermfg=47 " SpringGreen2
+highlight Normal ctermfg=35 " SpringGreen3
