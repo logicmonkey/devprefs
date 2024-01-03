@@ -24,6 +24,7 @@ map <Space> :noh<cr>
 :nmap <Leader>b :Tmux make vbuild<cr>
 :nmap <Leader>v :Tmux make irun<cr>
 :nmap <Leader>r :Tmux make vrun<cr>
+:nmap <Leader>k :Tmux make <cr>
 
 " Monkey
 let @m="#          ,`\\\n#     ...    /\n#   @ O O @.'\n
@@ -69,8 +70,6 @@ call plug#begin()
   Plug 'lervag/vimtex'
   Plug 'preservim/nerdtree'
   Plug 'vhda/verilog_systemverilog.vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'caglartoklu/mustangregular.vim'
 call plug#end()
 
 " Settings to enable lightline and disable old mode indicator
@@ -110,7 +109,6 @@ endif
 
 colorscheme ullswater
 
-
 "-------------------------------------------------------------
 " Autocmds
 "-------------------------------------------------------------
@@ -123,7 +121,6 @@ fun! <SID>StripTrailSpace()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailSpace()
-
 
 "-------------------------------------------------------------
 " Useful for creating colorschemes

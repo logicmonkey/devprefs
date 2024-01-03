@@ -66,7 +66,7 @@ let g:ullswater_bold = get(g:, '_bold', 0)
   hi Constant guifg=#0087d7 ctermfg=32 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi String guifg=#5f8787 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Character guifg=#00ff5f ctermfg=47 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Function guifg=#87afff ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+  hi Function guifg=#b3deef ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Statement guifg=#5f8787 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Conditional guifg=#00ff5f ctermfg=47 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Repeat guifg=#00ff5f ctermfg=47 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
