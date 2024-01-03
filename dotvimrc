@@ -76,7 +76,7 @@ call plug#end()
 " Settings to enable lightline and disable old mode indicator
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'tender' }
+let g:lightline = { 'colorscheme': 'ullswater' }
 
 " settings for vimtex
 set encoding=utf-8
@@ -108,8 +108,7 @@ if &term =~ "xterm"
   endif
 endif
 
-"colorscheme bolokai
-colorscheme tender
+colorscheme ullswater
 
 
 "-------------------------------------------------------------
