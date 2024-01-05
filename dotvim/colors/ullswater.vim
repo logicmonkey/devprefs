@@ -40,7 +40,7 @@ let g:ullswater_bold = get(g:, '_bold', 0)
   hi LineNr guifg=#444444 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi MatchParen guifg=#f43753 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi NonText guifg=#444444 ctermfg=238 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Normal guifg=#00af5f ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+  hi Normal guifg=#00af5f ctermfg=35 guibg=#282828 ctermbg=235 gui=NONE cterm=NONE
   hi PMenu guifg=#dadada ctermfg=253 guibg=#335261 ctermbg=239 gui=NONE cterm=NONE
   hi PMenuSel guifg=#335261 ctermfg=239 guibg=#c9d05c ctermbg=185 gui=NONE cterm=NONE
   hi PmenuSbar guifg=#335261 ctermfg=239 guibg=#c9d05c ctermbg=185 gui=NONE cterm=NONE
